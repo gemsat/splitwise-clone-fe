@@ -1,8 +1,7 @@
-//import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import {useCountStore} from './store/store';
+import {useCountStore} from './store';
 
 function App() {
   const count = useCountStore((state) => state.count);
@@ -24,7 +23,6 @@ function App() {
         <button className='mar-1' onClick={increaseCount}>
           count is {count}
         </button>
-        <br></br>
         <button className='mar-1' onClick={resetCount}>
           reset count
         </button>
