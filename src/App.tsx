@@ -1,10 +1,12 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import {useCountStore} from './store';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const count = useCountStore((state) => state.count);
+  const increaseCount = useCountStore((state)=>state.increaseCount);
+  const resetCount = useCountStore((state) => state.resetCount);
 
   return (
     <>
@@ -18,8 +20,11 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button className='mar-1' onClick={increaseCount}>
           count is {count}
+        </button>
+        <button className='mar-1' onClick={resetCount}>
+          reset count
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
