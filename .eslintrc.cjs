@@ -25,7 +25,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    'spaced-commnet': 2,
+    'spaced-comment': 2,
     'react/no-unused-prop-types': 1,
     '@typescript-eslint/default-param-last': 2,
   },
