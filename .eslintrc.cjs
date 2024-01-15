@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import("eslint").Config} */
+const config = {
   root: true,
   env: { browser: true, es2020: true },
   settings: {
@@ -15,11 +16,15 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
+    'plugin:prettier/recommended',
     'prettier',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
+  parserOptions: {
+    "project": "./tsconfig.json"
+  },
+  plugins: ['react-refresh',],
   rules: {
     'react-refresh/only-export-components': [
       'warn',
@@ -28,5 +33,8 @@ module.exports = {
     'spaced-comment': 2,
     'react/no-unused-prop-types': 1,
     '@typescript-eslint/default-param-last': 2,
+    'prettier/prettier': 2,
   },
 }
+
+module.exports = config
