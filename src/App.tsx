@@ -1,11 +1,11 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import {useCountStore} from './store';
+import { useCountStore } from './store';
 
 function App() {
   const count = useCountStore((state) => state.count);
-  const increaseCount = useCountStore((state)=>state.increaseCount);
+  const increaseCount = useCountStore((state) => state.increaseCount);
   const resetCount = useCountStore((state) => state.resetCount);
 
   return (
