@@ -1,11 +1,10 @@
-import { formSchema , FormDataTypes } from '../../src/schemas'
+import { formSchema , FormDataTypes } from '../../schemas';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import './ZodTestComponentCss.css';
-import React from 'react';
+import './styles.css';
 
 
-export function ZodTestComponent() {
+export default function ZodTestComponent() {
 
     const { register, handleSubmit, formState: {errors} } = useForm<FormDataTypes>({ resolver: zodResolver(formSchema) });
 
