@@ -1,15 +1,5 @@
 import { z } from 'zod';
 
-
-// export type FormDataTypes = {
-//   firstName: string;
-//   lastName: string;
-//   email: string;
-//   age: number;
-//   password: string;
-//   confirmPassword: string;
-// }
-
 export const formSchema = z.object({
   firstName: z.string().min(2).max(20),
   lastName: z.string().min(2).max(20),
