@@ -27,6 +27,9 @@ const config = {
   },
   plugins: ['react-refresh',],
   rules: {
+    "@typescript-eslint/no-misused-promises": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-props-no-spreading": "off",
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },

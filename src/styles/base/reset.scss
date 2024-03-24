@@ -1,0 +1,24 @@
+@use '../colors.scss' as *;
+
+.dark{
+    .text{
+        color: $text-white;
+    }
+    .background{
+        background-color: $bg-darkgrey;
+    }
+}
+
+.light{
+    .text{
+        color: $text-black;
+    }
+    .background{
+        background-color: $bg-white;
+    }
+}
+
+.button-green{
+    color: $text-white;
+    background-color: $button-green;
+}
